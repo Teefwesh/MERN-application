@@ -1,4 +1,5 @@
 import axios from "axios";
+import { API } from "../../api";
 import {
   PRODUCT_CREATE_REVIEW_FAIL,
   PRODUCT_CREATE_REVIEW_REQUEST,
@@ -19,7 +20,7 @@ export const listProduct =
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
       const { data } = await axios.get(
-        `https://tegs-store.herokuapp.com/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+        `${API}/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
       );
 
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
