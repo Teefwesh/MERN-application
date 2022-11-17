@@ -1,1 +1,1 @@
-export const API = "https://tegs-store.herokuapp.com";
+export const API = "https://tegs-store.herokuapp.com/api";
